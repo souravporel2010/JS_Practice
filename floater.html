@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating</title>
+    <style>
+        #floatingdiv {
+            height: 200px;
+            width: 100px;
+            background-color: darkgreen;
+        }
+        #floatingPic {
+            width: 200px;
+            height: 300px;
+        }
+        #floatingPic img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <marquee><h1>Floating Heading</h1></marquee> 
+
+    <marquee direction='right'>
+        <div id='floatingdiv'>
+            Pupa Pagli
+        </div>
+    </marquee>
+    <button id='startAnim' value="Start">Start</button>  
+    <div id="floatingPic">
+        <img src="./images/1.jpg" />
+    </div>
+    
+    <script>
+        var pic =document.getElementById('floatingPic');
+        var btnStart = document.getElementById('startAnim');
+        var interval;
+
+        btnStart.onclick = ()=> {
+            if(btnStart.innerText==='Start') 
+            {
+                btnStart.innerText='Stop';
+                btnStart.style.backgroundColor='yellow';
+            }
+            else {
+                btnStart.innerText='Start';
+                btnStart.style.backgroundColor='cyan';
+            }
+            if(interval===null || interval ===undefined)
+            {
+                interval= setInterval(startAnimation, 15);
+            }
+            else    
+            {
+                clearInterval(interval);
+                interval=undefined;
+            }
+            
+        }
+        
+        var startAnimation = ()=> {
+            //pic.style.left+= value;
+            //alert('height- '+ window.innerHeight + ', width- '+ window.innerWidth);
+            
+            var currentPosition= parseInt(pic.style.left);
+            if(currentPosition >= window.innerWidth-205) 
+            { 
+                currentPosition=0;
+            }
+            else {
+                currentPosition+=5;
+            }
+            pic.style.left=currentPosition +'px';
+           //alert('tr');
+        } 
+        
+        window.onload= () => {
+            pic.style.position='absolute';
+            pic.style.left='0px'
+            btnStart.style.width='100px';
+            btnStart.style.height='30px';
+            btnStart.style.fontSize='20px';
+            btnStart.style.backgroundColor='cyan';
+            setTimeout()
+            
+        }
+    </script>
+</body>
+</html>

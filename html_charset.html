@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .textbox {
+            width: 50px;
+            border-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div> 
+        From charset : <input type="text" id="UniFrom" class="textbox">
+        To charset : <input type="text" id="UniTo" class="textbox">
+        <input type="button" value="Generate" id="bntgenerate">
+    </div>
+    <div>
+        <table id="tblCharset">
+            <tbody></tbody>
+        </table>
+    </div>
+    <script>
+        var btn = document.getElementById("bntgenerate");
+        
+        btn.onclick= function() {
+            var from = document.getElementById("UniFrom").value;
+            var to = document.getElementById("UniTo").value;
+            var total= eval(from)+ eval(to);
+            
+            alert(total);
+        }
+    </script>
+</body>
+</html>

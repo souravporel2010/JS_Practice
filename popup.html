@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .modal { 
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,0.5); /* Black w/ opacity */;
+        }
+        .close:hover, .close:focus {
+            cursor: pointer;
+        }
+        .close { 
+            position:absolute;
+            top:0;
+            right: 0;
+            font-size: 40px;
+            color:maroon;
+            font-weight: bold;
+        }
+        #modalContent {
+            display: block;
+            height: 200px;
+            width: 300px;
+            top:35%;
+            left: 35%;
+            position: absolute;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="btnClick" value="Open Popup" />
+    <p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p>
+    <p>We use JavaScript to trigger the modal and to display the current image inside the modal 
+        when it is clicked on. Also note that we use the value from the image's "alt" attribute 
+        as an image caption text inside the modal.</p>
+    <div id="modalContainer" class="modal">
+        <div id='modalContent'>
+            <span class="close">&times;</span>
+            <p>This is test message</p>
+        </div>
+    </div>
+
+    <script>
+        let btn= document.getElementById('btnClick');
+        let modalcont= document.getElementById('modalContainer');
+        btn.onclick = function() {
+            modalcont.style.display='block';
+        };
+        let cls= document.getElementsByClassName('close')[0];
+        cls.onclick = ()=> { modalcont.style.display='none';}
+    </script>
+</body>
+</html>

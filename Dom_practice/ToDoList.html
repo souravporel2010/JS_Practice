@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+
+    <style>
+        #input_container {
+            background-color: darkblue;
+            padding: 20px;
+            margin: 20px;
+        }
+        #input_container h1 {
+            color: cyan;
+            padding-left: 30%;
+            font-size: 36px;
+        }
+        #id {
+            display: block;
+            height: 30px;
+        }
+        #txt {
+            height: 30px;
+            width: 500px; 
+        }
+        #add {
+            height: 30px;
+        }
+    </style>
+</head>     
+<body>
+    <div id='input_container'>
+        <h1>TO DO LIST </h1>
+        <input type="text" id="txt" placeholder="Enter a Task" >
+        <!-- <button id='add'>Add</button> -->
+        <input type="button" id="add" value="Add">
+        
+    </div> 
+    <div id="tasklist">
+        
+    </div>
+
+    <script src="scripts/todolist.js"></script>
+</body>
+</html>
