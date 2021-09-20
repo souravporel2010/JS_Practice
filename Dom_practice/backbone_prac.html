@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/html" id="tmp_list">
+        <li><%= name %></li>
+    </script>
+    <script type="text/html" id='tmp_addnew'>
+        <h3>Home View</h3>
+        <button id="btn_Addnew"> Add New Contact </button>
+    </script>
+    <script type="text/html" id="tmp_Create">
+        <table> 
+            <thead><h3>Add Contact</h3></thead>
+            <tbody>
+                <tr>
+                    <td><label>Name: </label></td>
+                    <td><input type="text" id="txtName"/></td>
+                </tr>
+                <tr>
+                    <td><button id="btn_Save">Save</button></td>
+                    <td><button id="btn_Close">Close</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </script>
+</head>
+<body>
+    <h1>Demo backbone application</h1>
+    <div id="HomeCnt"></div>
+    <div id="list"></div>
+    <div id="addContainer"></div>
+    <script src="./scripts/jquery-3.6.0.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script> -->
+    <!-- <script src="./scripts/underscore-umd.js"></script> -->
+    <script src="./scripts/underscore-umd-min.js"></script>
+    <script src='./scripts/backbone.js'></script>
+
+    <script src="./scripts/bcbn.js"> 
+    </script>
+</body>
+</html>
